@@ -163,12 +163,199 @@ Select Review and Create, it took 2 minutes 9 seconds to complete when I did thi
 Go to your dashboard, if you pinned the LinuxVM like I did it should say *Running* on the tile.  
 Select it, and it opens the a blade showing several menus on the left and details on the right. We won't go through all of theseas  there's a fair few lectures here alone, but let's **Connect** to the VM (top left).
 
-This will give us the connection details we need, the ssh connection string such as username@ip address. Unfortunately this won't work yet because we haven't opened the ssh port to connect from outside.
+This will give us the connection details we need, the ssh connection string such as username@ip address. Unfortunately this won't work yet because we haven't opened the ssh port to connect from outside. Copy the code to connect by selecting the Copy to Clipboard icon.
 
+![image](https://user-images.githubusercontent.com/38020233/55687509-77eb7780-5965-11e9-9e89-a469ab1d80a9.png)
 
+You can use any ssh client you like to connect to the VM of course, but if you have Windows 10 version 1803 (April 2018) or later, it's built in to Windows now. Alternatively, download and use putty.exe or whatever client you have in the college image.
+To use Windows 10 ssh:
+1. Windows key + R => cmd => enter
+1. paste the ssh connection code from your own VM (it will be something like username@ip) => enter
+1. Not surprisingly, it doesn't connect because we haven't enabled external public connections
+1. Go back to Azure portal, select *Networking* from the *Settings* in the VM
+
+![image](https://user-images.githubusercontent.com/38020233/55687537-ddd7ff00-5965-11e9-9195-f2258311ebd7.png)
+
+Find the **Add inbound port rule** button and:
+1. Add a *Destination port* of 22 for ssh
+1. Click Add
+
+![image](https://user-images.githubusercontent.com/38020233/55687570-44f5b380-5966-11e9-94b5-f0b1bb4a618e.png)
+
+Now try ssh again and you should be prompted for a password. Enter it and you are logged into your Linux VM!
+
+If you know Python, try this:
+Create and edit a new Python file: nano test.py
+```
+nums = range(-10, 10, 2)
+for i in nums:
+        print(i)
+```
+Save with CTRL+O and exit with CTRL+X
+
+Run the file with: python test.py
+
+Remember to stop the VM when finished using it.
+
+### Creating a Windows VM
+This is very similar process, but slightly different ways to connect to the VM.
+1. Create the VM, select same options (though a different name) and **Image** as *Windows 10 Pro 1809* (it is possible that depending on your subscription, some images from third party companies are not available to you)
+1. I selected Standard D2s v3 as it costs 0.09 EUR/Hr and has 8 gigs of RAM, but you can select anything as long as you remember to switch it off
+1. Allow **Public inbound ports** this time, select RDP
+
+Took 6 minutes 38 seconds to deploy for me. Go to the resource when it is finished for you.
+1. Connect
+1. Download RDP file
+1. Open downloaded file with Remote Desktop (unless that is blocked in college network, which is possible)
+1. Put in the username and password you configured earlier
+1. Use Windows as normal
+
+*Remember to switch off all VMs when you are finished*
 
 ## Databases (*SQL Database*)
+SQL Database is a hosted enterprise database that is much cheaper than buying a CPU license and server yourself.
+Let's create a database and connect to it with Java (or your choice of programming language).
+The design is as follows:
+1. You need a **Server**
+1. Each server can have multiple **Databases**
+1. Each database can have multiple **Tables**
 
+Luckily, you can create the server with *Create new* when creating your first database.
+
+![image](https://user-images.githubusercontent.com/38020233/55689322-05859200-597b-11e9-90f7-ed2be660ff80.png)
+
+Note the Server name must be unique, so if the one you want is taken, add something to the name until it is unique. 
+
+Because this is just for teaching, I selected a **Basic 100 MB** configuation (costs $5 a month, or €4.21)
+
+Review and Create -> Create. Deployment for me took 2 minutes exactly.
+Go to the resource and select *Query editor (preview)* and log in.
+I used [Mockaroo.com](https://mockaroo.com/) to generate the following fake data:
+```
+create table Students (
+	id INT,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	email VARCHAR(50),
+	gender VARCHAR(50)
+);
+insert into Students (id, first_name, last_name, email, gender) values (1, 'Danyette', 'De Paoli', 'Danyette.De Paoli@athlone.edu', 'Female');
+insert into Students (id, first_name, last_name, email, gender) values (2, 'Gilbertina', 'Pond', 'Gilbertina.Pond@athlone.edu', 'Female');
+insert into Students (id, first_name, last_name, email, gender) values (3, 'Othella', 'Hendrickson', 'Othella.Hendrickson@athlone.edu', 'Female');
+insert into Students (id, first_name, last_name, email, gender) values (4, 'Mikkel', 'Selburn', 'Mikkel.Selburn@athlone.edu', 'Male');
+insert into Students (id, first_name, last_name, email, gender) values (5, 'Renae', 'MacNish', 'Renae.MacNish@athlone.edu', 'Female');
+insert into Students (id, first_name, last_name, email, gender) values (6, 'Archibaldo', 'Ousby', 'Archibaldo.Ousby@athlone.edu', 'Male');
+insert into Students (id, first_name, last_name, email, gender) values (7, 'Gottfried', 'Scrooby', 'Gottfried.Scrooby@athlone.edu', 'Male');
+insert into Students (id, first_name, last_name, email, gender) values (8, 'Mattie', 'McGinley', 'Mattie.McGinley@athlone.edu', 'Female');
+insert into Students (id, first_name, last_name, email, gender) values (9, 'Whitney', 'Berntsson', 'Whitney.Berntsson@athlone.edu', 'Male');
+insert into Students (id, first_name, last_name, email, gender) values (10, 'Lonee', 'Bilbery', 'Lonee.Bilbery@athlone.edu', 'Female');
+```
+for the Students table.
+Also, the marks table, I generated the marks using Excel (as it's quick and easy).
+```
+create table Marks (
+	id INT,
+	moduleTitle VARCHAR(40),
+	mark INT
+);
+
+insert into Marks (id, moduleTitle, mark) values (	1, 'Digital Media', 6);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Digital Media', 84);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Digital Media', 93);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Digital Media', 83);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Digital Media', 49);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Digital Media', 69);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Digital Media', 75);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Mathematics', 85);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Mathematics', 8);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Mathematics', 88);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Mathematics', 92);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Mathematics', 76);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Mathematics', 67);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Mathematics', 91);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Mathematics', 11);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Mathematics', 85);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Mathematics', 5);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Web Development', 74);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Web Development', 3);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Web Development', 85);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Web Development', 80);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Web Development', 95);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Web Development', 82);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Web Development', 14);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Web Development', 60);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Web Development', 67);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Web Development', 64);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Computer Applications', 14);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Computer Applications', 52);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Computer Applications', 78);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Computer Applications', 100);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Computer Applications', 70);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Computer Applications', 30);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Computer Applications', 38);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Computer Applications', 72);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Computer Applications', 66);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Computer Applications', 78);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Software Development', 91);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Software Development', 64);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Software Development', 58);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Software Development', 63);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Software Development', 7);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Software Development', 95);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Software Development', 27);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Software Development', 38);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Software Development', 47);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Software Development', 49);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Networks', 56);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Networks', 30);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Networks', 98);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Networks', 5);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Networks', 67);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Networks', 73);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Networks', 14);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Networks', 100);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Networks', 64);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Networks', 21);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Mobile Apps and Connected Devices', 98);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Mobile Apps and Connected Devices', 71);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Mobile Apps and Connected Devices', 68);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Mobile Apps and Connected Devices', 48);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Mobile Apps and Connected Devices', 87);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Mobile Apps and Connected Devices', 30);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Mobile Apps and Connected Devices', 57);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Mobile Apps and Connected Devices', 10);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Mobile Apps and Connected Devices', 61);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Mobile Apps and Connected Devices', 89);
+insert into Marks (id, moduleTitle, mark) values (	1, 'Communications (Mobile Devices and Apps)', 77);
+insert into Marks (id, moduleTitle, mark) values (	2, 'Communications (Mobile Devices and Apps)', 10);
+insert into Marks (id, moduleTitle, mark) values (	3, 'Communications (Mobile Devices and Apps)', 62);
+insert into Marks (id, moduleTitle, mark) values (	4, 'Communications (Mobile Devices and Apps)', 84);
+insert into Marks (id, moduleTitle, mark) values (	5, 'Communications (Mobile Devices and Apps)', 34);
+insert into Marks (id, moduleTitle, mark) values (	6, 'Communications (Mobile Devices and Apps)', 37);
+insert into Marks (id, moduleTitle, mark) values (	7, 'Communications (Mobile Devices and Apps)', 24);
+insert into Marks (id, moduleTitle, mark) values (	8, 'Communications (Mobile Devices and Apps)', 55);
+insert into Marks (id, moduleTitle, mark) values (	9, 'Communications (Mobile Devices and Apps)', 2);
+insert into Marks (id, moduleTitle, mark) values (	10, 'Communications (Mobile Devices and Apps)', 13);
+
+```
+
+Now, to add all the SQL above to the database, we'll use that query editor. Paste each query in (including the Create Table statement) and click Run. You should see 10 rows affected to create the students and 80 for the marks.
+
+Now let's run some queries.
+What is the average mark in Mathematics?
+```
+SELECT AVG(mark) as MathsAvg FROM Marks WHERE moduleTitle = 'Mathematics'
+```
+
+Show the names and marks in descending order for Networks:  
+```
+SELECT Marks.mark, Students.first_name, Students.last_name FROM Marks INNER JOIN Students ON Marks.id=Students.id WHERE Marks.moduleTitle = 'Networks' ORDER BY Marks.Mark DESC;
+```
+
+The best student in each subject
 
 ## Compute (*App Service* & *Web App Service*) 
 
