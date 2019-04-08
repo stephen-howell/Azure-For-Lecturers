@@ -259,87 +259,87 @@ create table Marks (
 	mark INT
 );
 
-insert into Marks (id, moduleTitle, mark) values (	1, 'Digital Media', 6);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Digital Media', 84);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Digital Media', 93);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Digital Media', 83);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Digital Media', 76);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Digital Media', 76);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Digital Media', 49);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Digital Media', 69);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Digital Media', 75);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Digital Media', 76);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Mathematics', 85);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Mathematics', 8);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Mathematics', 88);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Mathematics', 92);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Mathematics', 76);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Mathematics', 67);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Mathematics', 91);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Mathematics', 11);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Mathematics', 85);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Mathematics', 5);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Web Development', 74);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Web Development', 3);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Web Development', 85);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Web Development', 80);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Web Development', 95);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Web Development', 82);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Web Development', 14);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Web Development', 60);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Web Development', 67);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Web Development', 64);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Computer Applications', 14);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Computer Applications', 52);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Computer Applications', 78);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Computer Applications', 100);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Computer Applications', 70);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Computer Applications', 30);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Computer Applications', 38);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Computer Applications', 72);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Computer Applications', 66);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Computer Applications', 78);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Software Development', 91);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Software Development', 64);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Software Development', 58);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Software Development', 63);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Software Development', 7);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Software Development', 95);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Software Development', 27);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Software Development', 38);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Software Development', 47);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Software Development', 49);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Networks', 56);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Networks', 30);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Networks', 98);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Networks', 5);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Networks', 67);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Networks', 73);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Networks', 14);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Networks', 100);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Networks', 64);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Networks', 21);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Mobile Apps and Connected Devices', 98);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Mobile Apps and Connected Devices', 71);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Mobile Apps and Connected Devices', 68);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Mobile Apps and Connected Devices', 48);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Mobile Apps and Connected Devices', 87);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Mobile Apps and Connected Devices', 30);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Mobile Apps and Connected Devices', 57);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Mobile Apps and Connected Devices', 10);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Mobile Apps and Connected Devices', 61);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Mobile Apps and Connected Devices', 89);
-insert into Marks (id, moduleTitle, mark) values (	1, 'Communications (Mobile Devices and Apps)', 77);
-insert into Marks (id, moduleTitle, mark) values (	2, 'Communications (Mobile Devices and Apps)', 10);
-insert into Marks (id, moduleTitle, mark) values (	3, 'Communications (Mobile Devices and Apps)', 62);
-insert into Marks (id, moduleTitle, mark) values (	4, 'Communications (Mobile Devices and Apps)', 84);
-insert into Marks (id, moduleTitle, mark) values (	5, 'Communications (Mobile Devices and Apps)', 34);
-insert into Marks (id, moduleTitle, mark) values (	6, 'Communications (Mobile Devices and Apps)', 37);
-insert into Marks (id, moduleTitle, mark) values (	7, 'Communications (Mobile Devices and Apps)', 24);
-insert into Marks (id, moduleTitle, mark) values (	8, 'Communications (Mobile Devices and Apps)', 55);
-insert into Marks (id, moduleTitle, mark) values (	9, 'Communications (Mobile Devices and Apps)', 2);
-insert into Marks (id, moduleTitle, mark) values (	10, 'Communications (Mobile Devices and Apps)', 13);
 
+insert into Marks (id, moduleTitle, mark) values (1, 'Digital Media', 6);
+insert into Marks (id, moduleTitle, mark) values (2, 'Digital Media', 84);
+insert into Marks (id, moduleTitle, mark) values (3, 'Digital Media', 93);
+insert into Marks (id, moduleTitle, mark) values (4, 'Digital Media', 83);
+insert into Marks (id, moduleTitle, mark) values (5, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (6, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (7, 'Digital Media', 49);
+insert into Marks (id, moduleTitle, mark) values (8, 'Digital Media', 69);
+insert into Marks (id, moduleTitle, mark) values (9, 'Digital Media', 75);
+insert into Marks (id, moduleTitle, mark) values (10, 'Digital Media', 76);
+insert into Marks (id, moduleTitle, mark) values (1, 'Mathematics', 85);
+insert into Marks (id, moduleTitle, mark) values (2, 'Mathematics', 8);
+insert into Marks (id, moduleTitle, mark) values (3, 'Mathematics', 88);
+insert into Marks (id, moduleTitle, mark) values (4, 'Mathematics', 92);
+insert into Marks (id, moduleTitle, mark) values (5, 'Mathematics', 76);
+insert into Marks (id, moduleTitle, mark) values (6, 'Mathematics', 67);
+insert into Marks (id, moduleTitle, mark) values (7, 'Mathematics', 91);
+insert into Marks (id, moduleTitle, mark) values (8, 'Mathematics', 11);
+insert into Marks (id, moduleTitle, mark) values (9, 'Mathematics', 85);
+insert into Marks (id, moduleTitle, mark) values (10, 'Mathematics', 5);
+insert into Marks (id, moduleTitle, mark) values (1, 'Web Development', 74);
+insert into Marks (id, moduleTitle, mark) values (2, 'Web Development', 3);
+insert into Marks (id, moduleTitle, mark) values (3, 'Web Development', 85);
+insert into Marks (id, moduleTitle, mark) values (4, 'Web Development', 80);
+insert into Marks (id, moduleTitle, mark) values (5, 'Web Development', 95);
+insert into Marks (id, moduleTitle, mark) values (6, 'Web Development', 82);
+insert into Marks (id, moduleTitle, mark) values (7, 'Web Development', 14);
+insert into Marks (id, moduleTitle, mark) values (8, 'Web Development', 60);
+insert into Marks (id, moduleTitle, mark) values (9, 'Web Development', 67);
+insert into Marks (id, moduleTitle, mark) values (10, 'Web Development', 64);
+insert into Marks (id, moduleTitle, mark) values (1, 'Computer Applications', 14);
+insert into Marks (id, moduleTitle, mark) values (2, 'Computer Applications', 52);
+insert into Marks (id, moduleTitle, mark) values (3, 'Computer Applications', 78);
+insert into Marks (id, moduleTitle, mark) values (4, 'Computer Applications', 100);
+insert into Marks (id, moduleTitle, mark) values (5, 'Computer Applications', 70);
+insert into Marks (id, moduleTitle, mark) values (6, 'Computer Applications', 30);
+insert into Marks (id, moduleTitle, mark) values (7, 'Computer Applications', 38);
+insert into Marks (id, moduleTitle, mark) values (8, 'Computer Applications', 72);
+insert into Marks (id, moduleTitle, mark) values (9, 'Computer Applications', 66);
+insert into Marks (id, moduleTitle, mark) values (10, 'Computer Applications', 78);
+insert into Marks (id, moduleTitle, mark) values (1, 'Software Development', 91);
+insert into Marks (id, moduleTitle, mark) values (2, 'Software Development', 64);
+insert into Marks (id, moduleTitle, mark) values (3, 'Software Development', 58);
+insert into Marks (id, moduleTitle, mark) values (4, 'Software Development', 63);
+insert into Marks (id, moduleTitle, mark) values (5, 'Software Development', 7);
+insert into Marks (id, moduleTitle, mark) values (6, 'Software Development', 95);
+insert into Marks (id, moduleTitle, mark) values (7, 'Software Development', 27);
+insert into Marks (id, moduleTitle, mark) values (8, 'Software Development', 38);
+insert into Marks (id, moduleTitle, mark) values (9, 'Software Development', 47);
+insert into Marks (id, moduleTitle, mark) values (10, 'Software Development', 49);
+insert into Marks (id, moduleTitle, mark) values (1, 'Networks', 56);
+insert into Marks (id, moduleTitle, mark) values (2, 'Networks', 30);
+insert into Marks (id, moduleTitle, mark) values (3, 'Networks', 98);
+insert into Marks (id, moduleTitle, mark) values (4, 'Networks', 5);
+insert into Marks (id, moduleTitle, mark) values (5, 'Networks', 67);
+insert into Marks (id, moduleTitle, mark) values (6, 'Networks', 73);
+insert into Marks (id, moduleTitle, mark) values (7, 'Networks', 14);
+insert into Marks (id, moduleTitle, mark) values (8, 'Networks', 100);
+insert into Marks (id, moduleTitle, mark) values (9, 'Networks', 64);
+insert into Marks (id, moduleTitle, mark) values (10, 'Networks', 21);
+insert into Marks (id, moduleTitle, mark) values (1, 'Mobile Apps and Connected Devices', 98);
+insert into Marks (id, moduleTitle, mark) values (2, 'Mobile Apps and Connected Devices', 71);
+insert into Marks (id, moduleTitle, mark) values (3, 'Mobile Apps and Connected Devices', 68);
+insert into Marks (id, moduleTitle, mark) values (4, 'Mobile Apps and Connected Devices', 48);
+insert into Marks (id, moduleTitle, mark) values (5, 'Mobile Apps and Connected Devices', 87);
+insert into Marks (id, moduleTitle, mark) values (6, 'Mobile Apps and Connected Devices', 30);
+insert into Marks (id, moduleTitle, mark) values (7, 'Mobile Apps and Connected Devices', 57);
+insert into Marks (id, moduleTitle, mark) values (8, 'Mobile Apps and Connected Devices', 10);
+insert into Marks (id, moduleTitle, mark) values (9, 'Mobile Apps and Connected Devices', 61);
+insert into Marks (id, moduleTitle, mark) values (10, 'Mobile Apps and Connected Devices', 89);
+insert into Marks (id, moduleTitle, mark) values (1, 'Communications (Mobile Devices and Apps)', 77);
+insert into Marks (id, moduleTitle, mark) values (2, 'Communications (Mobile Devices and Apps)', 10);
+insert into Marks (id, moduleTitle, mark) values (3, 'Communications (Mobile Devices and Apps)', 62);
+insert into Marks (id, moduleTitle, mark) values (4, 'Communications (Mobile Devices and Apps)', 84);
+insert into Marks (id, moduleTitle, mark) values (5, 'Communications (Mobile Devices and Apps)', 34);
+insert into Marks (id, moduleTitle, mark) values (6, 'Communications (Mobile Devices and Apps)', 37);
+insert into Marks (id, moduleTitle, mark) values (7, 'Communications (Mobile Devices and Apps)', 24);
+insert into Marks (id, moduleTitle, mark) values (8, 'Communications (Mobile Devices and Apps)', 55);
+insert into Marks (id, moduleTitle, mark) values (9, 'Communications (Mobile Devices and Apps)', 2);
+insert into Marks (id, moduleTitle, mark) values (10, 'Communications (Mobile Devices and Apps)', 13);
 ```
 
 Now, to add all the SQL above to the database, we'll use that query editor. Paste each query in (including the Create Table statement) and click Run. You should see 10 rows affected to create the students and 80 for the marks.
@@ -355,7 +355,10 @@ Show the names and marks in descending order for Networks:
 SELECT Marks.mark, Students.first_name, Students.last_name FROM Marks INNER JOIN Students ON Marks.id=Students.id WHERE Marks.moduleTitle = 'Networks' ORDER BY Marks.Mark DESC;
 ```
 
-The best student in each subject
+The best student in each subject:
+```
+
+```
 
 ## Compute (*App Service* & *Web App Service*) 
 
